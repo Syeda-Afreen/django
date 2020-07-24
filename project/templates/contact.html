@@ -1,0 +1,38 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block title %}
+contactpage
+{% endblock title %}
+
+
+{% block body %}
+
+<div class="container mt-3">
+
+<form action="/contact" method="post">{% csrf_token %}
+
+<h3><span class="badge badge-success mb-2">GET IN TOUCH</span></h3>
+
+<p class="mt-3 mb-2">We are always happy to make valuable new contacts.</p>
+
+
+<input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+
+<input type="email" id="email" name="email" class="form-control mt-2" placeholder="Your Email" required>
+
+<input type="number" id="num" name="num" class="form-control mt-2" placeholder="Your Mobile Number" required>
+
+<textarea class="form-control mt-2" id="desc" name="desc" placeholder="Message" required rows="3">
+</textarea>
+
+<br>
+<button class="btn btn-sm btn-primary btn-block" type="submit">SUBMIT </button></br>
+
+</form>
+</div>
+
+{% endblock body %}
+    
+
+

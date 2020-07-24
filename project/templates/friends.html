@@ -1,0 +1,67 @@
+{% extends 'basic.html' %}
+{% block title %}
+freinds blog page
+{% endblock title %}
+{% block body %}
+
+<center><p class="text-center mt-3 mb-3"><h1>MY FRIENDS-BLOG POSTS</h1></p></center>
+<center>
+<div class="container mt-4">
+<div class="spinner-grow text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-warning" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-dark" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+</div>
+</center>
+
+{% for post in allPosts %}
+<div class="container mt-3">
+<div class="card">
+<div class="card-header">
+NAME : {{post.name}}
+</div>
+
+<div class="card-body">
+<h4 class="card-title">{{post.title}}</h4>
+<p class="card-text">{{post.content}}</p>
+<hr>
+<p>Posted On : {{post.timeStamp}}</p>
+</div>
+
+</div>
+</div>
+
+
+
+{% endfor %}
+
+{% endblock body %}
